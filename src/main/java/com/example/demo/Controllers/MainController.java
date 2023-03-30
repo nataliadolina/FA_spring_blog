@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class MainController {
 
-    @GetMapping("/1")
+    @GetMapping("/")
     public String main_page(Model model) {
         model.addAttribute("title", "Главная страница");
         return "main_page";
