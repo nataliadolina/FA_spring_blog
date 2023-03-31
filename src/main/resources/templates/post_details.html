@@ -12,8 +12,10 @@
             <p th:text="${el.anons}"></p>
             <p th:text="${el.full_text}"></p>
             <p th:text="${el.views}"></p>
-            <a th:href="'/blog/post/' + ${el.id} + '/edit'" class="btn btn-light">Редактировать</a>
-            <a th:href="'/blog/post/delete/' + ${el.id} + '/delete'" class="btn btn-light">Удалить</a>
+            <a th:href="'/blog/post/' + ${el.id} + '/edit'" class="btn btn-light">Редактировать</a><br><br>
+            <form th:action="'/blog/post/' + ${el.id} + '/delete'" method="post">
+                <button type="submit" th:href="'/blog/post/' + ${el.id} + '/delete'" class="btn btn-light">Удалить</button>
+            </form>
         </div>
     </div>
 </div>
